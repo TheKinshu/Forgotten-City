@@ -14,6 +14,7 @@ public class wireManager : MonoBehaviour
     [SerializeField] private string wire6Safety;
     [SerializeField] private int numWires;
     [SerializeField] private GameObject game;
+    [SerializeField] private GameObject triggerObject;
     private Dictionary<Button, string> wireStates = new Dictionary<Button, string>();
 
     private void Start()
@@ -48,7 +49,10 @@ public class wireManager : MonoBehaviour
             test.interactable = false;
             numWires -= 1;
             if (numWires == 0)
+            {
                 game.SetActive(false);
+                Destroy(triggerObject);
+            }     
         }
     }
 }
