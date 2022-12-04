@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
 
 public class inventory : MonoBehaviour
 {
@@ -8,8 +10,12 @@ public class inventory : MonoBehaviour
     [SerializeField] private trophies slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, slot10, slot11, slot12, slot13, slot14, slot15, slot16;
     private Dictionary<trophies, bool> inventorySlots = new Dictionary<trophies, bool>();
 
+    private Scene currentScene;
+
+    [SerializeField] private TextMeshProUGUI stageName;
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
         inventorySlots.Add(slot1, false);
         inventorySlots.Add(slot2, false);
         inventorySlots.Add(slot3, false);
@@ -28,9 +34,13 @@ public class inventory : MonoBehaviour
         inventorySlots.Add(slot16, false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+    private void Update()
+    {
+        stageName.text = currentScene.name;
+    }
+    // Update is called once per frame
+    private void loadInventory()
+    {
     }
 }

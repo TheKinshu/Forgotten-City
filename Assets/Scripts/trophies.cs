@@ -11,7 +11,7 @@ public class trophies : MonoBehaviour
     void Start()
     {
         trophieAnimation = GetComponent<Animator>();
-        achieved = true;
+        achieved = false;
         setAchieved(achieved);
     }
 
