@@ -5,19 +5,36 @@ using UnityEngine;
 public class trophies : MonoBehaviour
 {
     // Start is called before the first frame update
-    private bool achieved;
+    [SerializeField] private bool achieved;
+    [SerializeField] private int slotNum;
     private Animator trophieAnimation;
 
     void Start()
     {
         trophieAnimation = GetComponent<Animator>();
         achieved = false;
+
         setAchieved(achieved);
+    }
+
+    private void Update()
+    {
+        trophieAnimation.SetBool("achieve", achieved);
     }
 
     // Update is called once per frame
     public void setAchieved(bool ach)
     {
-        trophieAnimation.SetBool("achieve", ach);
+        achieved = ach;
+    }
+
+    public void setSlot(int num)
+    {
+        slotNum = num;
+    }
+
+    public bool getAchieved()
+    {
+        return achieved;
     }
 }

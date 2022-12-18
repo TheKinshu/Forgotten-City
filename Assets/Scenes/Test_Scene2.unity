@@ -34258,7 +34258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202766071309071160, guid: 376b4ff018ce2074a80343b5e05670e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2202766071309071163, guid: 376b4ff018ce2074a80343b5e05670e2, type: 3}
       propertyPath: m_Enabled
@@ -34409,6 +34409,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2608013863987165770, guid: 99a3aa2bf48520f42a75929c2b0ad203, type: 3}
+      propertyPath: NameOfLevel.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2608013863987165770, guid: 99a3aa2bf48520f42a75929c2b0ad203, type: 3}
+      propertyPath: NameOfLevel.Array.data[0]
+      value: Test
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99a3aa2bf48520f42a75929c2b0ad203, type: 3}
 --- !u!1001 &6181443790959166889
@@ -34446,6 +34454,10 @@ PrefabInstance:
       propertyPath: wire6
       value: 
       objectReference: {fileID: 1709870814}
+    - target: {fileID: 6181443792019186886, guid: 25a919941a649d542837f410d1ee0e38, type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 44907447}
     - target: {fileID: 6181443792019186887, guid: 25a919941a649d542837f410d1ee0e38, type: 3}
       propertyPath: m_Name
       value: WireManager

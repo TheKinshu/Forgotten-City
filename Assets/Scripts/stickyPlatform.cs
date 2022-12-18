@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class stickyPlatform : MonoBehaviour
 {
+
+    private PlayerMovement playerController;
+
+    private void Start()
+    {
+        playerController = Object.FindObjectOfType<PlayerMovement>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
@@ -17,6 +24,7 @@ public class stickyPlatform : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.transform.SetParent(null);
+            playerController.forceUpdate();
         }
     }
 }

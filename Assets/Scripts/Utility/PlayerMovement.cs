@@ -106,4 +106,9 @@ public class PlayerMovement : MonoBehaviour
     {
         startPoint = location;
     }
+
+    public void forceUpdate()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
 }

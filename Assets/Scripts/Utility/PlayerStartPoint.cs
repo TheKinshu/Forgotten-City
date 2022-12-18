@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStartPoint : MonoBehaviour {
+public class PlayerStartPoint : MonoBehaviour
+{
 
     private PlayerMovement playerController;
     private GameObject playerObject;
