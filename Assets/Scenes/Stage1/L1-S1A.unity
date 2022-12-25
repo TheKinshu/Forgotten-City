@@ -43037,5 +43037,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8138794232410351115, guid: bad3d36dede3ebb4fbcb0282cd59d3f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad3d36dede3ebb4fbcb0282cd59d3f8, type: 3}

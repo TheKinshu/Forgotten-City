@@ -10,7 +10,7 @@ public class Logic : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private Button option1, option2, option3, option4;
     [SerializeField] private ListQuestions trivias;
-    [SerializeField] private GameObject screen;
+    [SerializeField] private GameObject screen, winPanel, triggerObject;
     // Start is called before the first frame update
     private List<string> questions;
     private List<string> options;
@@ -96,7 +96,9 @@ public class Logic : MonoBehaviour
     {
         if (completedQuestion.Count == questions.Count)
         {
+            winPanel.SetActive(true);
             screen.SetActive(false);
+            Destroy(triggerObject);
         }
         else
         {

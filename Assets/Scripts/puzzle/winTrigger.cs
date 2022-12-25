@@ -5,7 +5,6 @@ using UnityEngine;
 public class winTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject winPanel;
-    [SerializeField] private string lobby;
     [SerializeField] private GameObject exitDoor;
     [SerializeField] private inventory inven;
     [SerializeField] private int badgeNum;
