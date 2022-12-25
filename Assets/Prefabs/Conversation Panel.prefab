@@ -523,7 +523,18 @@ MonoBehaviour:
   chat: {fileID: 5285287972646170203}
   counter: 0
   conversationSize: 0
-  delay: 0.1
+  images:
+  - {fileID: 1043844369, guid: 469af048c118f2a4daa96b00d8abb4a5, type: 3}
+  - {fileID: -44809858, guid: 1079a2a4822e1204dada24b191b648c9, type: 3}
+  - {fileID: 411987286, guid: 2197e41de41257d48b96dbd3f4e3a3b0, type: 3}
+  - {fileID: -2037908035, guid: d77ffa9f7094087429b7bb64197eca45, type: 3}
+  - {fileID: -156106708, guid: 8d669f34be1c5f24db419ec001e3c60c, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentTalker: {fileID: 5285287974196877866}
 --- !u!1 &5285287973895022409
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,5 +41,10 @@ public class NPC : MonoBehaviour
 
         }
     }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        endTrigger = false;
+        startConv = false;
+    }
 
 }

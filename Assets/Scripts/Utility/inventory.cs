@@ -30,9 +30,14 @@ public class inventory : MonoBehaviour
     }
 
 
-    public void checkthis(trophies t)
+    public bool checkAchieved(int i)
     {
-        Debug.Log(t == slot1);
+        return inventorySlots[i].getAchieved();
+    }
+
+    public void setAchieved(int i)
+    {
+        inventorySlots[i].setAchieved(true);
     }
 
 

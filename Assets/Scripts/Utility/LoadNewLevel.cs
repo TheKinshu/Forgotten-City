@@ -14,13 +14,18 @@ public class LoadNewLevel : MonoBehaviour
 
     [SerializeField] private GameObject playerObject;
     [SerializeField] private bool checkTrophies;
+    [SerializeField] private int whichTrophy;
     private bool completed, startLevel;
+    [SerializeField] private inventory inven;
+    private Animator flagAnimation;
     // Start is called before the first frame update
     private void Start()
     {
+
         playerController = Object.FindObjectOfType<PlayerMovement>();
         startPointController = Object.FindObjectOfType<PlayerStartPoint>();
         playerObject = GameObject.FindGameObjectWithTag("Player");
+        inven = Object.FindObjectOfType<inventory>();
         completed = false;
         startLevel = false;
     }
@@ -30,7 +35,13 @@ public class LoadNewLevel : MonoBehaviour
         // check if player has gotten the required trophy
         if (checkTrophies)
         {
-
+            flagAnimation = GetComponent<Animator>();
+            if (inven.checkAchieved(whichTrophy))
+            {
+                flagAnimation.SetBool("achieved", true);
+                checkTrophies = false;
+                Destroy(this);
+            }
         }
 
         if (!completed)

@@ -5,14 +5,13 @@ using UnityEngine;
 public class trophies : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private bool achieved;
+    [SerializeField] private bool achieved = false;
     [SerializeField] private int slotNum;
     private Animator trophieAnimation;
 
     void Start()
     {
         trophieAnimation = GetComponent<Animator>();
-        achieved = false;
 
         setAchieved(achieved);
     }

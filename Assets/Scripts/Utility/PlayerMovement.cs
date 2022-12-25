@@ -49,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryState = !inventoryState;
-            inventory.SetActive(inventoryState);
+            inventory.GetComponent<Canvas>().enabled = inventoryState;
+            //inventory.SetActive(inventoryState);
         }
         dirX = Input.GetAxis("Horizontal");
         playerBody.velocity = new Vector2(dirX * moveSpeed, playerBody.velocity.y);

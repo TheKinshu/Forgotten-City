@@ -6,11 +6,12 @@ public class winTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject winPanel;
     [SerializeField] private string lobby;
-    [SerializeField] private GameObject leaveLevel;
-    private inventory inven;
+    [SerializeField] private GameObject exitDoor;
+    [SerializeField] private inventory inven;
+    [SerializeField] private int badgeNum;
     private void Start()
     {
-
+        inven = Object.FindObjectOfType<inventory>();
     }
     private void Update()
     {
@@ -19,7 +20,9 @@ public class winTrigger : MonoBehaviour
         {
             Time.timeScale = 1;
             winPanel.SetActive(false);
-            leaveLevel.SetActive(true);
+            exitDoor.SetActive(true);
+
+            inven.setAchieved(badgeNum);
         }
     }
 }

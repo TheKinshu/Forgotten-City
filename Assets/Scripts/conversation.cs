@@ -14,10 +14,16 @@ public class conversation : MonoBehaviour
     [SerializeField] private int conversationSize;
 
     [SerializeField] private Sprite[] images;
-    [SerializeField] private string[] imagesName;
     private Sprite portrait;
 
+    [SerializeField] private GameObject currentTalker;
+
     // Start is called before the first frame update
+
+    private void Start()
+    {
+        portrait = null;
+    }
 
     public void load(string[] log, string[] character)
     {
@@ -25,14 +31,14 @@ public class conversation : MonoBehaviour
         speaker = character;
         conversationSize = log.Length;
         counter = 0;
-        chat.text = dialog[counter];
-
+        loadText();
     }
 
     public void converse(bool conv)
     {
         Time.timeScale = 0;
         currentCanvas.SetActive(true);
+        counter++;
     }
 
     private void Update()
@@ -41,7 +47,7 @@ public class conversation : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                chat.text = dialog[counter];
+                loadText();
                 counter++;
             }
         }
@@ -55,4 +61,25 @@ public class conversation : MonoBehaviour
         }
 
     }
+
+    private void loadText()
+    {
+        chat.text = dialog[counter];
+        chooseSpeaker();
+        currentTalker.GetComponent<Image>().sprite = portrait;
+        //currentTalker.sprite = portrait;
+    }
+
+    private void chooseSpeaker()
+    {
+        if (speaker[counter].Equals("frog"))
+            portrait = images[1];
+        else if (speaker[counter].Equals("virtual"))
+            portrait = images[0];
+        else if (speaker[counter].Equals("pink"))
+            portrait = images[2];
+        else if (speaker[counter].Equals("tika"))
+            portrait = images[3];
+    }
+
 }

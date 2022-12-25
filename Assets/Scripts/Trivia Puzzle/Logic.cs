@@ -10,6 +10,7 @@ public class Logic : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private Button option1, option2, option3, option4;
     [SerializeField] private ListQuestions trivias;
+    [SerializeField] private GameObject screen;
     // Start is called before the first frame update
     private List<string> questions;
     private List<string> options;
@@ -17,6 +18,7 @@ public class Logic : MonoBehaviour
     private int questionSelector;
 
     private List<string> currentOptions;
+    private List<int> completedQuestion;
 
     private Dictionary<Button, string> dicOption = new Dictionary<Button, string>();
     private void Start()
@@ -25,14 +27,8 @@ public class Logic : MonoBehaviour
         questions = new List<string>(trivias.getQuestion());
         options = new List<string>(trivias.getOptions());
         answers = new List<string>(trivias.getAnswers());
-        // Select a random number
-        questionSelector = (int)Random.Range(0, questions.Count);
-        // Set the initial questoin
-        questionText.text = questions[questionSelector];
-        currentOptions = new List<string>(options[questionSelector].Split(" "));
-        Shuffle(currentOptions);
-        changeBtnTxt();
-        setOptions();
+        completedQuestion = new List<int>();
+        nextQuestion();
     }
 
     // Update is called once per frame
@@ -70,10 +66,13 @@ public class Logic : MonoBehaviour
         }
 
         if (isCorrect == temp2.Length)
-            Debug.Log("correct answer");
+        {
+            dicOption = new Dictionary<Button, string>();
+
+            nextQuestion();
+        }
 
     }
-
     private void changeBtnTxt()
     {
         option1.GetComponentInChildren<TextMeshProUGUI>().text = currentOptions[0].ToString();
@@ -90,6 +89,46 @@ public class Logic : MonoBehaviour
             int rand = Random.Range(i, list.Count);
             list[i] = list[rand];
             list[rand] = temp;
+        }
+    }
+
+    private void nextQuestion()
+    {
+        if (completedQuestion.Count == questions.Count)
+        {
+            screen.SetActive(false);
+        }
+        else
+        {
+            if (completedQuestion.Count == 0)
+            {
+                // Select a random number
+                questionSelector = (int)Random.Range(0, questions.Count);
+                completedQuestion.Add(questionSelector);
+            }
+            else
+            {
+                bool temp = true;
+                while (temp)
+                {
+                    questionSelector = (int)Random.Range(0, questions.Count);
+                    temp = false;
+                    for (int i = 0; i < completedQuestion.Count; i++)
+                    {
+                        if (completedQuestion[i] == questionSelector)
+                            temp = true;
+
+                    }
+                }
+                completedQuestion.Add(questionSelector);
+            }
+
+            // Set the initial questoin
+            questionText.text = questions[questionSelector];
+            currentOptions = new List<string>(options[questionSelector].Split(" "));
+            Shuffle(currentOptions);
+            changeBtnTxt();
+            setOptions();
         }
     }
 }

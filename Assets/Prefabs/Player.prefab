@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849945927602662
 Animator:
   serializedVersion: 4
@@ -353,6 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849945996703748
 Animator:
   serializedVersion: 4
@@ -540,6 +544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849946051406455
 Animator:
   serializedVersion: 4
@@ -650,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849946055697855
 Animator:
   serializedVersion: 4
@@ -837,6 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849946142609472
 Animator:
   serializedVersion: 4
@@ -1193,7 +1203,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222849946471959254}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1553,6 +1563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849946776574980
 Animator:
   serializedVersion: 4
@@ -1819,6 +1831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947116995676
 Animator:
   serializedVersion: 4
@@ -1929,6 +1943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947200942978
 Animator:
   serializedVersion: 4
@@ -2193,6 +2209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947305963642
 Animator:
   serializedVersion: 4
@@ -2424,6 +2442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947382965456
 Animator:
   serializedVersion: 4
@@ -2534,6 +2554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947394373024
 Animator:
   serializedVersion: 4
@@ -3013,6 +3035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947439381273
 Animator:
   serializedVersion: 4
@@ -3371,6 +3395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947600376462
 Animator:
   serializedVersion: 4
@@ -3481,6 +3507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947883576303
 Animator:
   serializedVersion: 4
@@ -3744,6 +3772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849947948581925
 Animator:
   serializedVersion: 4
@@ -4068,6 +4098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e900590c11fcd41b382899d03e3941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieved: 0
+  slotNum: 0
 --- !u!95 &1222849948042104082
 Animator:
   serializedVersion: 4
