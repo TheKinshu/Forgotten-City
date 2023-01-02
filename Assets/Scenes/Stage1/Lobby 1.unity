@@ -2268,6 +2268,7 @@ Transform:
   m_Children:
   - {fileID: 433629305}
   - {fileID: 259069785}
+  - {fileID: 1554096780}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2380,7 +2381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493206337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.377, y: 22.913, z: 0}
+  m_LocalPosition: {x: 9.377, y: 22.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11023,6 +11024,7 @@ GameObject:
   - component: {fileID: 947319146}
   - component: {fileID: 947319148}
   - component: {fileID: 947319149}
+  - component: {fileID: 947319150}
   m_Layer: 0
   m_Name: Level3
   m_TagString: Untagged
@@ -11136,12 +11138,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameOfLevel:
-  - 
-  ExitPoint: 
+  - L1-S3A
+  ExitPoint: L1-S3
   playerObject: {fileID: 0}
-  checkTrophies: 0
-  whichTrophy: 0
+  checkTrophies: 1
+  whichTrophy: 3
   inven: {fileID: 0}
+--- !u!95 &947319150
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947319145}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f58955a7d18c3f4386b3be8b0e55505, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1023969138
 GameObject:
   m_ObjectHideFlags: 0
@@ -12067,6 +12089,53 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!1 &1554096779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554096780}
+  - component: {fileID: 1554096781}
+  m_Layer: 0
+  m_Name: Level2Exit (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1554096780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554096779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.57, y: 5.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 382690388}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554096781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554096779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee37522cf2f804ba3aeece37d38e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: LS-3A
+  prevLocation: {fileID: 0}
+  locationName: flag3
 --- !u!1 &1761379412
 GameObject:
   m_ObjectHideFlags: 0

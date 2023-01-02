@@ -8,6 +8,7 @@ public class winTrigger : MonoBehaviour
     [SerializeField] private GameObject exitDoor;
     [SerializeField] private inventory inven;
     [SerializeField] private int badgeNum;
+    [SerializeField] private bool checkdoor;
     private void Start()
     {
         inven = Object.FindObjectOfType<inventory>();

@@ -80,6 +80,8 @@ public class conversation : MonoBehaviour
             portrait = images[2];
         else if (speaker[counter].Equals("tika"))
             portrait = images[3];
+        else if (speaker[counter].Equals("radish"))
+            portrait = images[5];
     }
 
 }

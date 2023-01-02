@@ -5,27 +5,29 @@ using UnityEngine;
 public class logicObject : MonoBehaviour
 {
     [SerializeField] private bool currentState = false;
+    [SerializeField] private GameObject button;
     private bool triggerPuzzle = false;
     // Start is called before the first frame update
     private void Start()
     {
-        currentState = false;
+        //currentState = false;
     }
 
-    private void Update() 
+    private void Update()
     {
         if (triggerPuzzle)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                button.SetActive(currentState);
                 changeState();
+
             }
-        }  
+        }
     }
 
     private void changeState()
     {
-        Debug.Log("changed to: " + currentState);
         currentState = !currentState;
     }
 
@@ -40,7 +42,7 @@ public class logicObject : MonoBehaviour
             triggerPuzzle = true;
     }
 
-    private void OnTriggerExit2D(Collider2D other) 
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")
             triggerPuzzle = false;
