@@ -40,6 +40,10 @@ public class inventory : MonoBehaviour
         inventorySlots[i].setAchieved(true);
     }
 
+    public int getTrophyAchieved()
+    {
+        return inventorySlots.Count;
+    }
 
 
     // Update is called once per frame

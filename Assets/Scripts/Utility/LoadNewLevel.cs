@@ -15,6 +15,8 @@ public class LoadNewLevel : MonoBehaviour
     [SerializeField] private GameObject playerObject;
     [SerializeField] private bool checkTrophies;
     [SerializeField] private int whichTrophy;
+    [SerializeField] private bool nextLevel;
+    [SerializeField] private string nextLevelName;
     private bool completed, startLevel;
     [SerializeField] private inventory inven;
     private Animator flagAnimation;
@@ -27,11 +29,19 @@ public class LoadNewLevel : MonoBehaviour
         playerObject = GameObject.FindGameObjectWithTag("Player");
         inven = Object.FindObjectOfType<inventory>();
         completed = false;
+        nextLevel = false;
         startLevel = false;
     }
 
     private void Update()
     {
+        if (nextLevel)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene(this.nextLevelName);
+            }
+        } else {
         // check if player has gotten the required trophy
         if (checkTrophies)
         {
@@ -58,6 +68,8 @@ public class LoadNewLevel : MonoBehaviour
                 }
             }
         }
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D playerCollider)
@@ -68,6 +80,12 @@ public class LoadNewLevel : MonoBehaviour
             playerController.setStartPoint(ExitPoint);
             playerObject.GetComponent<PlayerMovement>().setStartPoint(ExitPoint);
             startLevel = true;
+
+            if (this.inven.getTrophyAchieved() == 4)
+            {
+                Debug.Log("You have completed the game!");
+                nextLevel = true;
+            }
         }
     }
 
@@ -76,6 +94,7 @@ public class LoadNewLevel : MonoBehaviour
         if (playerCollider.gameObject.name == "Player")
         {
             startLevel = false;
+            nextLevel = false;
         }
     }
 }

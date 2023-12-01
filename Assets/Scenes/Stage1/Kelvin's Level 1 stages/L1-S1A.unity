@@ -34739,7 +34739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3296537071988395867, guid: 5508a6f502458a846bbf0f8738b915f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5508a6f502458a846bbf0f8738b915f0, type: 3}
@@ -42931,6 +42931,14 @@ PrefabInstance:
     - target: {fileID: 2858876463086881402, guid: 83ef6123e1238a24fbf5eb0ccc3ada49, type: 3}
       propertyPath: m_Name
       value: puzzleTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858876463086881402, guid: 83ef6123e1238a24fbf5eb0ccc3ada49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124462648460367786, guid: 83ef6123e1238a24fbf5eb0ccc3ada49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242751286468370766, guid: 83ef6123e1238a24fbf5eb0ccc3ada49, type: 3}
       propertyPath: winPanel

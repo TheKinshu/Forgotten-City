@@ -6,6 +6,7 @@ public class winTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject exitDoor;
+    [SerializeField] private GameObject closedDoor;
     [SerializeField] private inventory inven;
     [SerializeField] private int badgeNum;
     [SerializeField] private bool checkdoor;
@@ -21,6 +22,7 @@ public class winTrigger : MonoBehaviour
             Time.timeScale = 1;
             winPanel.SetActive(false);
             exitDoor.SetActive(true);
+            closedDoor.SetActive(false);
 
             inven.setAchieved(badgeNum);
         }

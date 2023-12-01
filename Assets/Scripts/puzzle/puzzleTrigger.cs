@@ -5,7 +5,12 @@ using UnityEngine;
 public class puzzleTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject puzzleUI;
-    private bool triggerPuzzle = false;
+    [SerializeField] private bool triggerPuzzle = false;
+
+    private void Start()
+    {
+        puzzleUI.SetActive(false);
+    }
 
     private void Update()
     {
@@ -19,14 +24,17 @@ public class puzzleTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
+        Debug.Log("something");
         if (other.gameObject.name == "Player")
             triggerPuzzle = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("something");
+
         if (other.gameObject.name == "Player")
             triggerPuzzle = false;
     }

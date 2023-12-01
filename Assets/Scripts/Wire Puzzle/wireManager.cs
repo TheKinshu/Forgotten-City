@@ -42,6 +42,7 @@ public class wireManager : MonoBehaviour
         {
             Debug.Log("boom frogs");
             game.SetActive(false);
+            Time.timeScale = 1;
         }
         else if (wireStates[test] == "safe")
         {
